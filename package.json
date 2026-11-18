@@ -1,0 +1,24 @@
+{
+  "name": "claude-live-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Live React dashboard for Claude Code's local activity, plus a one-click installer for the claude-dashboard skill on any PC.",
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c cyan,magenta \"node server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "vite build && node server/index.js",
+    "serve": "node server/index.js",
+    "install-skill": "node server/installSkill.js"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "concurrently": "9.1.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "vite": "5.4.11"
+  }
+}
